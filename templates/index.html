@@ -1,0 +1,143 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        background-color: #879dbe;
+        font-family: Arial, sans-serif;
+        zoom: 79%;
+        
+    }
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        color: #ffffff;
+    }
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+    }
+    label {
+        font-weight: bold;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    div{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    h4 {
+        text-align: center;
+        margin-top: 20px;
+        color: #4393e3;
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpack Price Prediction</title>
+</head>
+<body background="">
+    <h2>Backpack Price Prediction</h2>
+
+    <form id="backpackForm" method="POST">
+        <br>
+        <div>
+        <div class="form-group">
+        <label for="brand">Brand:</label>
+        <select class="form-control" id="brand" name="brand" >
+            <option value="Adidas">Adidas</option>
+            <option value="Jansport">Jansport</option>
+            <option value="Nike">Nike</option>
+            <option value="Puma">Puma</option>
+            <option value="Under Armour">Under Armour</option>
+            <option value="Other">Other</option>
+        </select>
+    </div >
+
+
+        <div class="form-group">
+            <label for="material">Material:</label>
+            <select class="form-control" id="material" name="material">
+            <option value="Canvas">Canvas</option>
+            <option value="Leather">Leather</option>
+            <option value="Nylon">Nylon</option>
+            <option value="Polyester">Polyester</option>
+            <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="style">Style:</label>
+            <select class="form-control" id="style" name="style">
+                <option value="Backpack">Backpack</option>
+                <option value="Messenger">Messenger</option>
+                <option value="Tote">Tote</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="color">Color:</label>
+            <select class="form-control" id="color" name="color">
+                <option value="Black">Black</option>
+                <option value="Blue">Blue</option>
+                <option value="Gray">Gray</option>
+                <option value="Green">Green</option>
+                <option value="Pink">Pink</option>
+                <option value="Red">Red</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="weightCapacity">Weight Capacity (kg):</label>
+            <input class="form-control" type="number" id="weightCapacity" name="weightCapacity" min="0">
+        </div>  
+
+        <div  class="form-group">
+            <label for="compartments">Compartments:</label>
+            <input class="form-control" type="number" id="compartments" name="compartments" min="0">
+             </div>
+
+        <div  class="form-group">
+            <label>Size:</label>
+            <input type="radio" id="small" name="small" value="1">
+            <label for="small" style="font-weight: normal;">Small</label>
+            <input type="radio" id="medium" name="medium" value="1">
+            <label for="medium" style="font-weight: normal;">Medium</label>
+            <input type="radio" id="large" name="large" value="1">
+            <label for="large" style="font-weight: normal;">Large</label>
+            <input type="radio" id="unknown" name="unknown" value="1">
+            <label for="unknown" style="font-weight: normal;">Unknown</label>
+            </div>
+
+        <div class="form-group">
+            <label for="laptopCompartment">Laptop Compartment:</label>
+                <input  type="checkbox" id="laptopCompartment" name="laptopCompartment" value="1">
+                <label class="form-check-label" for="laptopCompartment" style="font-weight: normal;">(yes/no)</label>
+        </div>
+
+        <div class="form-group">
+            <label for="waterproof">Waterproof:</label>
+                <input  type="checkbox" id="waterproof" name="waterproof" value="1">
+                <label class="form-check-label" for="waterproof" style="font-weight: normal;">(yes/no)</label>
+
+        </div>
+        </div>
+<br>
+    <input type="submit" style=" width: 70%;  margin-left: 90px;"  class="btn btn-success btn-lg" value="Submit">
+
+    <h4>Predicted Price: {{price}}</span></h4>
+   
+</form>
+</body>
+</html></select></form>
